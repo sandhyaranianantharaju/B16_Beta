@@ -1,0 +1,23 @@
+
+<div fxLayoutAlign="center center"fxFlexfill class="main-div ">
+    <mat-card fxFlex="25"> 
+       <mat-toolbar color="primary" [ngClass]="radioVal == 1 ? 'Purple' : radioVal == 2 ? 'Indigo' : radioVal == 3 ? 
+       'Pink' : 'Green'">Registration Page</mat-toolbar> 
+     <form fxLayoutAlign="stretch" fxLayout="column" class="login">
+     
+       <mat-form-field>
+         <input matInput placeholder="Email">
+       </mat-form-field>
+       <mat-form-field>
+        <input matInput type="password" placeholder=" Create Password">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password">
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary" [ngClass]="radioVal == 1 ? 'Purple' :
+       radioVal == 2 ? 'Indigo' : radioVal == 4 ? 'Pink' : 'Green'">Register</button><br>
+     
+     </form>
+    </mat-card>
+  </div>
+  

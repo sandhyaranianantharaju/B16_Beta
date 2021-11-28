@@ -1,0 +1,25 @@
+<mat-toolbar color="primary" [ngClass]="radioVal == 1 ? 'Purple' : radioVal == 2 ? 'Indigo' : radioVal == 3 ? 'Pink' : 'Green'">
+  
+    <span>Book Cart</span>
+    <span class="fill-remaining-space"></span>
+    <button mat-raised-button type="submit" (click)=" registerPage()" >Registration</button>
+    <button mat-raised-button type="submit" (click)="loginPage()">Login</button>
+  
+    <button mat-icon-button [matMenuTriggerFor]="menu" mdTooltip="Change theme"><mat-icon>format_color_fill</mat-icon></button>
+    <mat-menu #menu="matMenu" class="one">
+      <mat-radio-group aria-label="Select an option" value="1"
+      (change)="systemChange($event)">
+      <mat-radio-button value="1">Deep Purple & Amber</mat-radio-button>
+      <mat-radio-button value="2">Indigo & Pink</mat-radio-button>
+      <mat-radio-button value="3">Pink & Blue Grey</mat-radio-button>
+      <mat-radio-button value="4">Purple & Green</mat-radio-button>
+    </mat-radio-group>
+    </mat-menu>
+  </mat-toolbar>
+   
+  <div *ngIf="loginFlag">
+    <app-login [radioVal]="radioVal"></app-login>
+  </div>
+  <div *ngIf="registerFlag">
+    <app-registration [radioVal]="radioVal"></app-registration>
+  </div>
