@@ -7,15 +7,15 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  @Input('radioVal') radioVal:any;
- 
-  //radioVal = 1;
-  constructor( 
-    ) { }
-  
-    ngOnInit() { }
-    systemChange(e: any) {
-      this.radioVal = e.value;
-    }
-    
+  @Input('radioVal') radioVal: any;
+
+
+  constructor(
+  ) { }
+
+  ngOnInit() { }
+  systemChange(e: any) {
+    this.radioVal = e.value;
   }
+
+}

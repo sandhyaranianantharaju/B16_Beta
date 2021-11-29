@@ -6,10 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-  // title="'angular-material-theming-demo";
-  // theme ='DeepPurple-light-theme';
+
   @Input('radioVal') radioVal: any;
-  //radioVal = 1;
+
   constructor() { }
 
   ngOnInit(): void {
